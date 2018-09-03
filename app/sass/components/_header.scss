@@ -1,0 +1,114 @@
+.header {
+    background-color: $mint;
+
+    &__logo {
+        margin-right: 1rem;
+    }
+
+    &__img {
+        width: 15.4rem;
+        height: 6.4rem;
+    }
+
+    & .nav {
+        display: flex;
+        align-items: center;
+
+        & ul {
+            list-style: none;
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__link {
+            font-family: $main-font;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.125;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: .7rem 1.4rem;
+            position: relative;
+            
+            & span {
+                box-shadow: 0 1px 0 0 rgba(255,255,255,.2);
+            }
+
+            &:hover, &:focus, &:active {
+                color: $grey;
+                background-color: $light-grey;
+                border-radius: 2rem;
+            }
+
+            &--dropdown {
+                padding-bottom: .8rem;
+            }
+        }
+
+        & .dropdown {
+            position: relative;
+            padding-bottom: .8rem;
+
+            &__content {
+                display: none;
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                background-color: $light-grey;
+                min-width: 14.5rem;
+                box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 6px;
+            }
+
+            &__item {
+                &:not(.dropdown__item--active):hover {
+                    background-color: #fbded8;
+                }
+
+                &--active {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        background-color: #d1d0ce;
+                        width: 90%;
+                        height: 1px;
+                        bottom: 0;
+                        left: 5px;
+                    }
+                }
+            }
+
+            &__link {
+                font-family: $main-font;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.14;
+                color: $grey;
+                text-decoration: none;
+                padding: 1rem 2rem;
+                display: block;
+
+                &--active {
+                    font-family: $main-font;
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        &__user-list {
+            display: flex;
+        }
+    }
+}
+
+.dropdown:hover .dropdown__content {
+    display: block;
+}
