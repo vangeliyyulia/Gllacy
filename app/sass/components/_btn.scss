@@ -1,0 +1,18 @@
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: $main-font;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    padding: 1rem 2.2rem;
+    background: $red linear-gradient(to bottom, $red-gradient-light, $red-gradient-dark);
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 $dark-red;
+    transition: box-shadow 230ms;
+    z-index: 1;
+}

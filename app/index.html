@@ -60,36 +60,38 @@
                     </li>
                 </ul>
                 <ul class="nav__user-list">
-                    <li class="nav__user-item">
-                        <a class="nav__user-link" href="#">
-                            <svg class="navigation__icon" width="21" height="20">
+                    <li class="nav__user-item nav__user-item--search">
+                        <a class="nav__user-link nav__user-link--magnify" href="#">
+                            <svg class="nav__icon" width="21" height="20">
                                 <title>Поиск</title>
                                 <use xlink:href="img/icons/sprite.svg#icon-magnify"></use>
                             </svg>
                         </a>
                         <form class="search" name="search">
                             <div class="text-input">
-                                <input class="text-input__field__field" type="search" id="product-search" required>
-                                <label class="text-input__field__label" for="product-search">Что ищем?</label>
+                                <input class="text-input__field" type="search" id="product-search" required>
+                                <label class="text-input__label" for="product-search">Что ищем?</label>
                             </div>
                         </form>
                     </li>
-                    <li class="nav__user-item">
-                        <svg class="navigation__icon navigation__icon--spaced" width="21" height="20">
-                            <use xlink:href="img/icons/sprite.svg#icon-enter"></use>
-                        </svg>
-                        <a href="#" class="nav__user-link">Вход</a>
+                    <li class="nav__user-item nav__user-item--login">
+                        <a href="#" class="nav__user-link">
+                            <svg class="nav__icon nav__icon--spaced" width="21" height="20">
+                                <use xlink:href="img/icons/sprite.svg#icon-enter"></use>
+                            </svg>
+                            Вход
+                        </a>
                         <form action="#" class="login" name="login" method="POST" autocomplete="on">
                             <div class="text-input">
-                                <input class="text-input__field" type="email" name="email" id="email" required>
+                                <input class="text-input__field text-input__field--login" type="email" name="email" id="email" required>
                                 <label class="text-input__label" for="email">Электронная почта</label>
                             </div>
                             <div class="text-input">
-                                <input class="text-input__field" type="password" name="pass" id="pass" required>
+                                <input class="text-input__field text-input__field--login" type="password" name="pass" id="pass" required>
                                 <label class="text-input__label" for="pass">Пароль</label>
                             </div>
                             <div class="login__submit">
-                                <button class="login__btn" type="submit">Войти</button>
+                                <button class="login__btn btn" type="submit">Войти</button>
                                 <div class="login__links">
                                     <a href="#" class="login__link">Забыли пароль?</a>
                                     <a href="#" class="login__link">Новая регистрация</a>
@@ -99,7 +101,7 @@
                     </li>
                     <li class="nav__user-item">
                         <a href="#" class="nav__user-link">
-                            <svg class="navigation__icon navigation__icon--spaced" width="21" height="20">
+                            <svg class="nav__icon nav__icon--spaced" width="21" height="20">
                                 <title>Корзина</title>
                                 <use xlink:href="img/icons/sprite.svg#icon-bin"></use>
                             </svg>

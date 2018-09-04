@@ -1,0 +1,6 @@
+@mixin popup-style() {
+    padding: 2rem 1.5rem;
+    border-radius: $interface-border-radius;
+    background-color: #f8f7f4;
+    color: $interface-color;
+  }

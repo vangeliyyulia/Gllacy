@@ -1,0 +1,29 @@
+.login {
+    @include popup-style;
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+
+    &__submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: $main-font;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: $interface-color;
+        box-shadow: 0 1px 0 0 rgba(50, 50, 50, .2);
+        text-decoration: none;
+    }
+}
