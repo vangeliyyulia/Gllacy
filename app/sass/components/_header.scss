@@ -1,18 +1,23 @@
-.header {
+.page {
     background-color: $mint;
+}
 
-    &__logo {
-        margin-right: 1rem;
-    }
-
-    &__img {
-        width: 15.4rem;
-        height: 6.4rem;
-    }
+.header {
 
     & .nav {
         display: flex;
         align-items: center;
+
+        &__logo {
+            align-items: center;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+    
+        &__img {
+            width: 15.4rem;
+            height: 6.4rem;
+        }
 
         & ul {
             list-style: none;
@@ -20,6 +25,7 @@
 
         &__list {
             display: flex;
+            margin-top: 1rem;
         }
 
         &__link {
@@ -115,6 +121,7 @@
             display: flex;
             margin-left: auto;
             align-items: center;
+            margin-top: 1rem;
         }
 
         &__user-item {
@@ -122,6 +129,11 @@
             align-items: center;
             justify-content: center;
             padding-bottom: .8rem;
+
+            & span {
+                display: inline-block;
+                padding-left: 1rem;
+            }
 
             &:not(:last-child) {
                 margin-right: 1rem;
@@ -163,6 +175,10 @@
                 border-radius: 50%;
             }
 
+            &--cart {
+                padding: .6rem 2.5rem;
+            }
+
             &:hover {
                 background-color: $light-grey;
                 color: $grey;
@@ -172,6 +188,31 @@
                 fill: $grey;
             }
         }
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__content {
+        margin-left: auto;
+        color: #fff;
+        font-family: $main-font;
+        font-weight: 700;
+    }
+
+    &__time {
+        font-size: 1.4rem;
+        line-height: 1.14;
+        margin-bottom: 1rem;
+        text-align: right;
+    }
+
+    &__phone {
+        font-size: 2.2rem;
+        line-height: 1.09;
+        color: #fff;
+        text-decoration: none;
     }
 }
 

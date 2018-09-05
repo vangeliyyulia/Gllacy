@@ -5,8 +5,12 @@ $main-font: "Roboto", "Arial", sans-serif;
 
 $interface-border-radius: 5px;
 
+$fast-transition: 140ms;
+
 //colours
 $mint: #849d8f;
+$blue: #8996a6;
+$choco: #9d8b84;
 $grey: #3f3f3f;
 $light-grey: #f8f7f4;
 $interface-color: #323232;
@@ -14,3 +18,9 @@ $red: #de4133;
 $dark-red: rgba(127,22,16,.9);
 $red-gradient-light: #f97d52;
 $red-gradient-dark: #de4133;
+$link-hover: #ffbc9e;
+$link-active: #e84d37;
+
+$page-bg-mint-color: $mint;
+$page-bg-blue-color: $blue;
+$page-bg-chocolate-color: $choco;

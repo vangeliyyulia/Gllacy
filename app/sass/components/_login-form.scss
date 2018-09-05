@@ -4,6 +4,7 @@
     position: absolute;
     top: 4rem;
     right: 0;
+    z-index: 1;
 
     &__submit {
         display: flex;
@@ -12,8 +13,7 @@
     }
 
     &__links {
-        display: flex;
-        flex-direction: column;
+        margin-left: 2rem;
     }
 
     &__link {
@@ -25,5 +25,15 @@
         color: $interface-color;
         box-shadow: 0 1px 0 0 rgba(50, 50, 50, .2);
         text-decoration: none;
+
+        &:hover {
+            color: $link-hover;
+            box-shadow: 0 1px 0 0 $link-hover;
+        }
+
+        &:focus, &:active {
+            color: $link-active;
+            box-shadow: 0 1px 0 0 $link-active;
+        }
     }
 }

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/main.min.css">
     <title>Gllacy - лучшее мороженое, тоннами!</title>
 </head>
-<body>
+<body class="page">
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -79,7 +79,7 @@
                             <svg class="nav__icon nav__icon--spaced" width="21" height="20">
                                 <use xlink:href="img/icons/sprite.svg#icon-enter"></use>
                             </svg>
-                            Вход
+                            <span>Вход</span>
                         </a>
                         <form action="#" class="login" name="login" method="POST" autocomplete="on">
                             <div class="text-input">
@@ -100,17 +100,94 @@
                         </form>
                     </li>
                     <li class="nav__user-item">
-                        <a href="#" class="nav__user-link">
+                        <a href="#" class="nav__user-link nav__user-link--cart">
                             <svg class="nav__icon nav__icon--spaced" width="21" height="20">
                                 <title>Корзина</title>
                                 <use xlink:href="img/icons/sprite.svg#icon-bin"></use>
                             </svg>
-                            Пусто
+                            <span>Пусто</span>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <section class="header__info">
+                <div class="header__content">
+                    <p class="header__time">С 10 до 20, ежедневно</p>
+                    <a class="header__phone" href="tel:+7-812-450-25-25">8 812 450-25-25</a>
+                </div>
+            </section>
         </div>
     </header>
+    <main class="main">
+        <div class="container">
+            <section class="slider">
+                <div class="slider__list owl-carousel">
+                    <div class="slider__glow"></div>
+                    <div class="slider__item slider__item--visible" data-color="mint">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-1-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-1-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Крем-брюле и пломбир с малиновым джемом</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                    <div class="slider__item" data-color="blue">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-2-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-2-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Шоколадный пломбир и лимонный сорбет</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                    <div class="slider__item" data-color="choco">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-3-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-3-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Пломбир с помадкой и клубничный щербет</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="slider__toggles">
+                <h3 class="visually-hidden">Листать слайды:</h3>
+                <button class="slider__toggle slider__toggle--current" type="button">
+                    <span class="visually-hidden">Слайдер 1</span>
+                </button>
+                <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">Слайдер 2</span>
+                </button>
+                <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">Слайдер 3</span>
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>
