@@ -38,7 +38,9 @@
             text-decoration: none;
             display: inline-block;
             padding: .7rem 1.4rem;
+            border-radius: 2rem;
             position: relative;
+            transition: all 230ms ease-in-out;
             
             & span {
                 box-shadow: 0 1px 0 0 rgba(255,255,255,.2);
@@ -76,6 +78,8 @@
             }
 
             &__item {
+                transition: all 230ms ease-in-out;
+
                 &:not(.dropdown__item--active):hover {
                     background-color: #fbded8;
                 }
@@ -115,6 +119,7 @@
 
         &__icon {
             fill: #fff;
+            transition: all 230ms ease-in-out;
         }
     
         &__user-list {
@@ -128,7 +133,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom: .8rem;
+            padding-bottom: 1rem;
 
             & span {
                 display: inline-block;
@@ -141,6 +146,7 @@
 
             &--search {
                 position: relative;
+                padding-left: .8rem;
 
                 &:hover .search {
                     display: block;
@@ -169,6 +175,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: all 230ms ease-in-out;
 
             &--magnify {
                 padding: .6rem;
@@ -224,7 +231,6 @@
     right: 0;
     z-index: 5;
     min-width: 34.5rem;
-    box-shadow: 0 20px 20px 0 rgba(0,0,0,.4);
 }
 
 .text-input {
@@ -242,6 +248,7 @@
         color: #999;
         transition: box-shadow 230ms;
         width: 30.8rem;
+        transition: all .3 ease-in;
 
         &:hover {
             border-color: #c7c6c5;
@@ -253,15 +260,49 @@
             margin-bottom: 2rem;
         }
     }
+}
 
-    &__label {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-family: $main-font;
-        font-size: 1.4rem;
-        line-height: 1.7;
-        font-weight: 400;
-        color: #999;
-    }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #999;
+}
+:-moz-placeholder { /* Firefox 18- */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #999;
+}
+
+.bouncy-slide-down {
+    animation: bouncy-slide-down 850ms ease-in-out;
 }

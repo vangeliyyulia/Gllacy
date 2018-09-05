@@ -34,7 +34,7 @@
                 <ul class="nav__list">
                     <li class="nav__item dropdown">
                         <a href="#" class="nav__link nav__link--dropdown"><span>Каталог</span></a>
-                        <ul class="dropdown__content">
+                        <ul class="dropdown__content bouncy-slide-down">
                             <li class="dropdown__item dropdown__item--active">
                                 <a href="catalog.html" class="dropdown__link dropdown__link--active">Новинки</a>
                             </li>
@@ -67,10 +67,9 @@
                                 <use xlink:href="img/icons/sprite.svg#icon-magnify"></use>
                             </svg>
                         </a>
-                        <form class="search" name="search">
+                        <form class="search bouncy-slide-down" name="search">
                             <div class="text-input">
-                                <input class="text-input__field" type="search" id="product-search" required>
-                                <label class="text-input__label" for="product-search">Что ищем?</label>
+                                <input class="text-input__field" type="search" id="product-search" placeholder="Что ищем?" required>
                             </div>
                         </form>
                     </li>
@@ -81,14 +80,12 @@
                             </svg>
                             <span>Вход</span>
                         </a>
-                        <form action="#" class="login" name="login" method="POST" autocomplete="on">
+                        <form action="#" class="login bouncy-slide-down" name="login" method="POST" autocomplete="on">
                             <div class="text-input">
-                                <input class="text-input__field text-input__field--login" type="email" name="email" id="email" required>
-                                <label class="text-input__label" for="email">Электронная почта</label>
+                                <input class="text-input__field text-input__field--login" type="email" name="email" id="email" placeholder="Электронная почта" required>
                             </div>
                             <div class="text-input">
-                                <input class="text-input__field text-input__field--login" type="password" name="pass" id="pass" required>
-                                <label class="text-input__label" for="pass">Пароль</label>
+                                <input class="text-input__field text-input__field--login" type="password" name="pass" id="pass" placeholder="Пароль" required>
                             </div>
                             <div class="login__submit">
                                 <button class="login__btn btn" type="submit">Войти</button>
@@ -121,9 +118,9 @@
     <main class="main">
         <div class="container">
             <section class="slider">
+                <div class="slider__glow"></div>
                 <div class="slider__list owl-carousel">
-                    <div class="slider__glow"></div>
-                    <div class="slider__item slider__item--visible" data-color="mint">
+                    <div class="slider__item slider-slide">
                         <div class="slider__images">
                             <picture>
                                 <source type="image/webp" srcset="img/content/hero-ice-1-1.webp">
@@ -139,7 +136,7 @@
                             <a href="#" class="btn btn--large">Давайте оба!</a>
                         </div>
                     </div>
-                    <div class="slider__item" data-color="blue">
+                    <div class="slider__item slider-slide">
                         <div class="slider__images">
                             <picture>
                                 <source type="image/webp" srcset="img/content/hero-ice-2-1.webp">
@@ -155,7 +152,7 @@
                             <a href="#" class="btn btn--large">Давайте оба!</a>
                         </div>
                     </div>
-                    <div class="slider__item" data-color="choco">
+                    <div class="slider__item slider-slide">
                         <div class="slider__images">
                             <picture>
                                 <source type="image/webp" srcset="img/content/hero-ice-3-1.webp">
@@ -175,13 +172,13 @@
             </section>
             <section class="slider__toggles">
                 <h3 class="visually-hidden">Листать слайды:</h3>
-                <button class="slider__toggle slider__toggle--current" type="button">
+                <button class="slider__toggle active" id="mint" type="button" onclick="currentSlide(1)">
                     <span class="visually-hidden">Слайдер 1</span>
                 </button>
-                <button class="slider__toggle" type="button">
+                <button class="slider__toggle" id="blue" type="button" onclick="currentSlide(2)">
                     <span class="visually-hidden">Слайдер 2</span>
                 </button>
-                <button class="slider__toggle" type="button">
+                <button class="slider__toggle" id="choco" type="button" onclick="currentSlide(3)">
                     <span class="visually-hidden">Слайдер 3</span>
                 </button>
             </section>
