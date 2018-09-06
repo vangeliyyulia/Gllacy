@@ -118,8 +118,20 @@
     <main class="main">
         <div class="container">
             <section class="slider">
+                <section class="slider__toggles">
+                    <h3 class="visually-hidden">Листать слайды:</h3>
+                    <button class="slider__toggle active" id="mint" type="button" onclick="currentSlide(1)">
+                        <span class="visually-hidden">Слайдер 1</span>
+                    </button>
+                    <button class="slider__toggle" id="blue" type="button" onclick="currentSlide(2)">
+                        <span class="visually-hidden">Слайдер 2</span>
+                    </button>
+                    <button class="slider__toggle" id="choco" type="button" onclick="currentSlide(3)">
+                        <span class="visually-hidden">Слайдер 3</span>
+                    </button>
+                </section>
                 <div class="slider__glow"></div>
-                <div class="slider__list owl-carousel">
+                <div class="slider__list">
                     <div class="slider__item slider-slide">
                         <div class="slider__images">
                             <picture>
@@ -170,17 +182,105 @@
                     </div>
                 </div>
             </section>
-            <section class="slider__toggles">
-                <h3 class="visually-hidden">Листать слайды:</h3>
-                <button class="slider__toggle active" id="mint" type="button" onclick="currentSlide(1)">
-                    <span class="visually-hidden">Слайдер 1</span>
-                </button>
-                <button class="slider__toggle" id="blue" type="button" onclick="currentSlide(2)">
-                    <span class="visually-hidden">Слайдер 2</span>
-                </button>
-                <button class="slider__toggle" id="choco" type="button" onclick="currentSlide(3)">
-                    <span class="visually-hidden">Слайдер 3</span>
-                </button>
+            <section class="specials">
+                <ul class="specials__list">
+                    <li class="specials__item specials__item--jam">
+                        <h3 class="specials__heading">Малинка даром!</h3>
+                        <p class="specials__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                        <a href="#" class="btn btn--specials">Хочу варенье!</a>
+                    </li>
+                    <li class="specials__item specials__item--choco">
+                        <h3 class="specials__heading">Шоколадки даром!</h3>
+                        <p class="specials__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                        <a href="#" class="btn btn--specials">Хочу шоколадки!</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="card">
+                <div class="container">
+                    <div class="card__list">
+                        <div class="card__item">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/1.webp">
+                                <img class="card__image" src="img/content/1.png" width="267" height="267" alt="Изображение мороженого">
+                            </picture>
+                            <p class="card__price">
+                                <span class="card__cost">310</span>
+                                <svg class="card__rouble" width="31" height="36">
+                                    <title>Рублей</title>
+                                    <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                                </svg>
+                                <span class="card__kilos">/кг</span>
+                            </p>
+                            <h4 class="card__name">
+                                <a class="card__link" href="#">
+                                    <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                                </a>
+                            </h4>
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                        <div class="card__item">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/2.webp">
+                                <img class="card__image" src="img/content/2.png" width="267" height="267" alt="Изображение мороженого">
+                            </picture>
+                            <p class="card__price">
+                                <span class="card__cost">380</span>
+                                <svg class="card__rouble" width="31" height="36">
+                                    <title>Рублей</title>
+                                    <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                                </svg>
+                                <span class="card__kilos">/кг</span>
+                            </p>
+                            <h4 class="card__name">
+                                <a class="card__link" href="#">
+                                    <span>Сливочно-кофейное с кусочками шоколада</span>
+                                </a>
+                            </h4>
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                        <div class="card__item">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/3.webp">
+                                <img class="card__image" src="img/content/3.png" width="267" height="267" alt="Изображение мороженого">
+                            </picture>
+                            <p class="card__price">
+                                <span class="card__cost">355</span>
+                                <svg class="card__rouble" width="31" height="36">
+                                    <title>Рублей</title>
+                                    <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                                </svg>
+                                <span class="card__kilos">/кг</span>
+                            </p>
+                            <h4 class="card__name">
+                                <a class="card__link" href="#">
+                                    <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
+                                </a>
+                            </h4>
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                        <div class="card__item">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/4.webp">
+                                <img class="card__image" src="img/content/4.png" width="267" height="267" alt="Изображение мороженого">
+                            </picture>
+                            <p class="card__price">
+                                <span class="card__cost">415</span>
+                                <svg class="card__rouble" width="31" height="36">
+                                    <title>Рублей</title>
+                                    <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                                </svg>
+                                <span class="card__kilos">/кг</span>
+                            </p>
+                            <h4 class="card__name">
+                                <a class="card__link" href="#">
+                                    <span>Сливочное крем-брюле с карамельной подливкой</span>
+                                </a>
+                            </h4>
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
