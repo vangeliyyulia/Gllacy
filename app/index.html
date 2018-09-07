@@ -216,7 +216,9 @@
                                 <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
                             </a>
                         </h4>
-                        <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
                     </div>
                     <div class="card__item">
                         <picture>
@@ -236,7 +238,9 @@
                                 <span>Сливочно-кофейное с кусочками шоколада</span>
                             </a>
                         </h4>
-                        <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
                     </div>
                     <div class="card__item">
                         <picture>
@@ -256,7 +260,9 @@
                                 <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
                             </a>
                         </h4>
-                        <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
                     </div>
                     <div class="card__item">
                         <picture>
@@ -276,7 +282,9 @@
                                 <span>Сливочное крем-брюле с карамельной подливкой</span>
                             </a>
                         </h4>
-                        <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -310,6 +318,28 @@
                             <use xlink:href="img/icons/sprite.svg#icon-thermo"></use>
                         </svg>
                         <p class="aboutus__description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="news">
+                <ul class="news__list">
+                    <li class="news__item news__item--blog">
+                        <h3 class="news__heading">Новое в нашем блоге</h3>
+                        <a href="#" class="news__link">10 способов сервировки фруктовых щербетов к столу</a>
+                    </li>
+                    <li class="news__item news__item--mail">
+                        <form class="news__form" name="subscribe" method="post" autocomplete="on">
+                            <p class="news__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                            <fieldset class="news__field">
+                                <div class="news__inner">
+                                    <div class="news__input text-input">
+                                        <input class="text-input__field" type="email" id="subscribe-mail" name="subscribe-mail" required>
+                                        <label class="text-input__label" for="subscribe-mail">Электронная почта</label>
+                                    </div>
+                                    <button class="btn" type="submit">Отправить</button>
+                                </div>
+                            </fieldset>
+                        </form>
                     </li>
                 </ul>
             </section>
