@@ -1,3 +1,16 @@
 @import 'app/css/normalize';
 
 @import 'base/base';
+@import 'base/var';
+@import 'base/mixins';
+@import 'base/animations';
+
+@import 'components/header';
+@import 'components/login-form';
+@import 'components/btn';
+@import 'components/slider';
+@import 'components/specials';
+@import 'components/card';
+@import 'components/aboutus';
+@import 'components/news';
+

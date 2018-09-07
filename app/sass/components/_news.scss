@@ -1,0 +1,29 @@
+.news {
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        padding: 1.5rem 2rem 2.5rem;
+        border-radius: 1.2rem;
+        color: $grey;
+        font-family: $main-font;
+        width: 49%;
+
+        &--blog {
+            background: white url("../img/decorative/strawberry.jpg") no-repeat center right;
+            background-size: 50%;
+        }
+
+        &--mail {
+            padding: 5px;
+            background: $blue url("../img/decorative/post.jpg") no-repeat top;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.specials {
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        padding: 1.5rem 2rem 2.5rem;
+        border-radius: 1.2rem;
+        color: #fff;
+        font-family: $main-font;
+        font-weight: 700;
+        width: 49%;
+
+        &--jam {
+            background: #d23754 url("../img/decorative/raspberry.jpg") no-repeat top;
+        }
+
+        &--choco {
+            background: #6d4432 url("../img/decorative/chocolate.jpg") no-repeat top;
+        }
+
+        &:not(:only-of-type):nth-of-type(2n-1) {
+            margin-right: 2%;
+        }
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        line-height: 1.17;
+        margin-bottom: 2.2rem;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 4rem;
+    }
+}

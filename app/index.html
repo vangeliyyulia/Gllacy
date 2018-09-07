@@ -1,16 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <meta property="og:image" content="img/content/og-image.jpg">
+    <meta property="og:image:height" content="473">
+    <meta property="og:image:width" content="903">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Крафтовое мороженое &laquo;Глэсси&raquo;">
+    <meta property="og:description" content="Элитное мороженое на развес. Ништяк!">
+
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <meta name="theme-color" content="#7a9c89">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/favicons/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <title>Gllacy</title>
     <meta name="description" content="">
+    <link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/main.min.css">
+    <title>Gllacy - лучшее мороженое, тоннами!</title>
 </head>
-<body>
-    <h1>HEllo world!</h1>
+<body class="page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="nav__logo">
+                    <img src="img/content/logo.svg" alt="Logo" class="nav__img">
+                </a>
+                <ul class="nav__list">
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link nav__link--dropdown"><span>Каталог</span></a>
+                        <ul class="dropdown__content bouncy-slide-down">
+                            <li class="dropdown__item dropdown__item--active">
+                                <a href="catalog.html" class="dropdown__link dropdown__link--active">Новинки</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Сливочное</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Щербеты</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Фруктовый Лед</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Мелорин</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link"><span>Доставка и оплата</span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link"><span>О Компании</span></a>
+                    </li>
+                </ul>
+                <ul class="nav__user-list">
+                    <li class="nav__user-item nav__user-item--search">
+                        <a class="nav__user-link nav__user-link--magnify" href="#">
+                            <svg class="nav__icon" width="21" height="20">
+                                <title>Поиск</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-magnify"></use>
+                            </svg>
+                        </a>
+                        <form class="search bouncy-slide-down" name="search">
+                            <div class="text-input">
+                                <input class="text-input__field" type="search" id="product-search" placeholder="Что ищем?" required>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav__user-item nav__user-item--login">
+                        <a href="#" class="nav__user-link">
+                            <svg class="nav__icon nav__icon--spaced" width="21" height="20">
+                                <use xlink:href="img/icons/sprite.svg#icon-enter"></use>
+                            </svg>
+                            <span>Вход</span>
+                        </a>
+                        <form action="#" class="login bouncy-slide-down" name="login" method="POST" autocomplete="on">
+                            <div class="text-input">
+                                <input class="text-input__field text-input__field--login" type="email" name="email" id="email" placeholder="Электронная почта" required>
+                            </div>
+                            <div class="text-input">
+                                <input class="text-input__field text-input__field--login" type="password" name="pass" id="pass" placeholder="Пароль" required>
+                            </div>
+                            <div class="login__submit">
+                                <button class="login__btn btn" type="submit">Войти</button>
+                                <div class="login__links">
+                                    <a href="#" class="login__link">Забыли пароль?</a>
+                                    <a href="#" class="login__link">Новая регистрация</a>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav__user-item">
+                        <a href="#" class="nav__user-link nav__user-link--cart">
+                            <svg class="nav__icon nav__icon--spaced" width="21" height="20">
+                                <title>Корзина</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-bin"></use>
+                            </svg>
+                            <span>Пусто</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="header__info">
+                <div class="header__content">
+                    <p class="header__time">С 10 до 20, ежедневно</p>
+                    <a class="header__phone" href="tel:+7-812-450-25-25">8 812 450-25-25</a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="slider">
+                <section class="slider__toggles">
+                    <h3 class="visually-hidden">Листать слайды:</h3>
+                    <button class="slider__toggle active" id="mint" type="button" onclick="currentSlide(1)">
+                        <span class="visually-hidden">Слайдер 1</span>
+                    </button>
+                    <button class="slider__toggle" id="blue" type="button" onclick="currentSlide(2)">
+                        <span class="visually-hidden">Слайдер 2</span>
+                    </button>
+                    <button class="slider__toggle" id="choco" type="button" onclick="currentSlide(3)">
+                        <span class="visually-hidden">Слайдер 3</span>
+                    </button>
+                </section>
+                <div class="slider__glow"></div>
+                <div class="slider__list">
+                    <div class="slider__item slider-slide">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-1-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-1-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Крем-брюле и пломбир с малиновым джемом</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                    <div class="slider__item slider-slide">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-2-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-2-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Шоколадный пломбир и лимонный сорбет</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                    <div class="slider__item slider-slide">
+                        <div class="slider__images">
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-3-1.webp">
+                                <img class="slider__image slider__image--closer" src="img/content/hero-ice-2-1.png" width="375" height="582" alt="Шоколадный пломбир">
+                            </picture>            
+                            <picture>
+                                <source type="image/webp" srcset="img/content/hero-ice-3-2.webp">
+                                <img class="slider__image slider__image--farther" src="img/content/hero-ice-2-2.png" width="338" height="523" alt="Лимонный сорбет">
+                            </picture>
+                        </div>
+                        <div class="slider__content">
+                            <h2 class="slider__heading">Пломбир с помадкой и клубничный щербет</h2>
+                            <a href="#" class="btn btn--large">Давайте оба!</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="specials">
+                <ul class="specials__list">
+                    <li class="specials__item specials__item--jam">
+                        <h3 class="specials__heading">Малинка даром!</h3>
+                        <p class="specials__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                        <a href="#" class="btn btn--specials">Хочу варенье!</a>
+                    </li>
+                    <li class="specials__item specials__item--choco">
+                        <h3 class="specials__heading">Шоколадки даром!</h3>
+                        <p class="specials__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                        <a href="#" class="btn btn--specials">Хочу шоколадки!</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="card">
+                <div class="card__list">
+                    <div class="card__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/content/1.webp">
+                            <img class="card__image" src="img/content/1.png" width="267" height="267" alt="Изображение мороженого">
+                        </picture>
+                        <p class="card__price">
+                            <span class="card__cost">310</span>
+                            <svg class="card__rouble" width="31" height="36">
+                                <title>Рублей</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                            </svg>
+                            <span class="card__kilos">/кг</span>
+                        </p>
+                        <h4 class="card__name">
+                            <a class="card__link" href="#">
+                                <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                            </a>
+                        </h4>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/content/2.webp">
+                            <img class="card__image" src="img/content/2.png" width="267" height="267" alt="Изображение мороженого">
+                        </picture>
+                        <p class="card__price">
+                            <span class="card__cost">380</span>
+                            <svg class="card__rouble" width="31" height="36">
+                                <title>Рублей</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                            </svg>
+                            <span class="card__kilos">/кг</span>
+                        </p>
+                        <h4 class="card__name">
+                            <a class="card__link" href="#">
+                                <span>Сливочно-кофейное с кусочками шоколада</span>
+                            </a>
+                        </h4>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/content/3.webp">
+                            <img class="card__image" src="img/content/3.png" width="267" height="267" alt="Изображение мороженого">
+                        </picture>
+                        <p class="card__price">
+                            <span class="card__cost">355</span>
+                            <svg class="card__rouble" width="31" height="36">
+                                <title>Рублей</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                            </svg>
+                            <span class="card__kilos">/кг</span>
+                        </p>
+                        <h4 class="card__name">
+                            <a class="card__link" href="#">
+                                <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
+                            </a>
+                        </h4>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/content/4.webp">
+                            <img class="card__image" src="img/content/4.png" width="267" height="267" alt="Изображение мороженого">
+                        </picture>
+                        <p class="card__price">
+                            <span class="card__cost">415</span>
+                            <svg class="card__rouble" width="31" height="36">
+                                <title>Рублей</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-ruble"></use>
+                            </svg>
+                            <span class="card__kilos">/кг</span>
+                        </p>
+                        <h4 class="card__name">
+                            <a class="card__link" href="#">
+                                <span>Сливочное крем-брюле с карамельной подливкой</span>
+                            </a>
+                        </h4>
+                        <div class="card__overlay">
+                            <button class="btn btn--card" type="button">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="aboutus">
+                <h2 class="aboutus__heading">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного<br> производства на развес</h2>
+                <ul class="aboutus__list">
+                    <li class="aboutus__item">
+                        <svg class="aboutus__icon" width="49" height="49">
+                            <title>Мороженое</title>
+                            <use xlink:href="img/icons/sprite.svg#icon-icecream"></use>
+                        </svg>
+                        <p class="aboutus__description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                    </li>
+                    <li class="aboutus__item">
+                        <svg class="aboutus__icon" width="49" height="49">
+                            <title>Корова</title>
+                            <use xlink:href="img/icons/sprite.svg#icon-cow"></use>
+                        </svg>
+                        <p class="aboutus__description">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                    </li>
+                    <li class="aboutus__item">
+                        <svg class="aboutus__icon" width="49" height="49">
+                            <title>Лист</title>
+                            <use xlink:href="img/icons/sprite.svg#icon-leaf"></use>
+                        </svg>
+                        <p class="aboutus__description">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                    </li>
+                    <li class="aboutus__item">
+                        <svg class="aboutus__icon" width="49" height="49">
+                            <title>Лист</title>
+                            <use xlink:href="img/icons/sprite.svg#icon-thermo"></use>
+                        </svg>
+                        <p class="aboutus__description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="news">
+                <ul class="news__list">
+                    <li class="news__item news__item--blog">
+                        <h3 class="news__heading">Новое в нашем блоге</h3>
+                        <a href="#" class="news__link">10 способов сервировки фруктовых щербетов к столу</a>
+                    </li>
+                    <li class="news__item news__item--mail">
+                        <form class="news__form" name="subscribe" method="post" autocomplete="on">
+                            <p class="news__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                            <fieldset class="news__field">
+                                <div class="news__inner">
+                                    <div class="news__input text-input">
+                                        <input class="text-input__field" type="email" id="subscribe-mail" name="subscribe-mail" required>
+                                        <label class="text-input__label" for="subscribe-mail">Электронная почта</label>
+                                    </div>
+                                    <button class="btn" type="submit">Отправить</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>

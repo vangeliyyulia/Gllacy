@@ -1,0 +1,44 @@
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: $main-font;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    padding: 1rem 2.2rem;
+    background: $red linear-gradient(to bottom, $red-gradient-light, $red-gradient-dark);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 $dark-red;
+    transition: box-shadow 230ms;
+    z-index: 1;
+    transition: background 850ms ease-in-out;
+
+    &:hover {
+        background: #fff linear-gradient(to bottom, #e74a35, #f26843);
+    }
+
+    &:focus, &:active {
+        outline: none;
+        background: $red linear-gradient(to bottom, #e74a35, #f26843);
+        box-shadow: inset 0 2px 4px 0 $dark-red;
+    }
+
+    &--large {
+        max-width: 40rem;
+        overflow: hidden;
+        font-size: 3.2rem;
+        padding: 1rem 4rem;
+    }
+
+    &--specials {
+        align-self: flex-end;
+    }
+
+    &--card {
+        align-self: center;
+    }
+}

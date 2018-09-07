@@ -12,6 +12,7 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		ftp            = require('vinyl-ftp'),
 		notify         = require("gulp-notify");
+		svgstore       = require('gulp-svgstore');
 
 // Скрипты проекта
 
@@ -113,3 +114,12 @@ gulp.task('clearcache', function () { return cache.clearAll(); });
 
 gulp.task('default', ['watch']);
 
+// Готовим svg-спрайт
+gulp.task('sprite', function () {
+	return gulp.src('app/img/icons/icon-*.svg')
+	  .pipe(svgstore({
+		inlineSvg: true
+	  }))
+	  .pipe(rename('sprite.svg'))
+	  .pipe(gulp.dest('app/img/icons'));
+  });
