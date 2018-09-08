@@ -303,6 +303,12 @@
     color: #999;
 }
 
+.text-input__field--news::-webkit-input-placeholder {
+    font-size: 1.6rem;
+}
+
+
+
 .bouncy-slide-down {
     animation: bouncy-slide-down 850ms ease-in-out;
 }

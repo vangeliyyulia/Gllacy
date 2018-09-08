@@ -333,8 +333,7 @@
                             <fieldset class="news__field">
                                 <div class="news__inner">
                                     <div class="news__input text-input">
-                                        <input class="text-input__field" type="email" id="subscribe-mail" name="subscribe-mail" required>
-                                        <label class="text-input__label" for="subscribe-mail">Электронная почта</label>
+                                        <input class="text-input__field text-input__field--news" type="email" id="subscribe-mail" name="subscribe-mail" placeholder="Электронная почта" required>
                                     </div>
                                     <button class="btn" type="submit">Отправить</button>
                                 </div>
@@ -344,6 +343,28 @@
                 </ul>
             </section>
         </div>
+        <section class="map">
+            <h3 class="visually-hidden">Наш адрес на Яндекс.Картах</h3>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af389e1170b5c61c2fa2e8161fab88ada69284ef9390dac1e649b2f69844ab15a&amp;source=constructor" width="100%" height="404" frameborder="0"></iframe>
+            <div class="map__inner"></div>
+            <section class="address address--on-map">
+                <h3 class="visually-hidden">Адрес и телефон:</h3>
+                <address class="address__inner">   
+                    <div class="address__part">
+                        <p class="address__heading">Адрес главного офиса и&nbsp;офлайн магазина:</p>
+                        <p class="address__para">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                    </div>    
+                    <div class="address__part">
+                        <p class="address__heading">Для заказов по телефону:</p>
+                        <p class="address__para">
+                            <a class="address__tel" href="tel:+7-812-450-25-25">8 812 450-25-25</a>
+                            <span class="address__unimportant">(с 10 до 20 ежедневно)</span>
+                        </p>
+                    </div>
+                </address>    
+                <a class="btn btn--address" href="#">Форма обратной связи</a>
+            </section>
+        </section>
     </main>
 
     <script src="js/scripts.min.js"></script>
