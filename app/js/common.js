@@ -46,3 +46,27 @@ var bodyChoco = document.getElementsByTagName("body");
 buttonChoco.addEventListener("click", function () {
   bodyChoco[0].style.backgroundColor = "#9d8b84"
 });
+
+//PopUp
+
+$(".feedback").submit(function() {
+  $.ajax({
+    type: "POST",
+    url: "mail.php",
+    data: $(this).serialize()
+  }).done(function() {
+    swal("Спасибо", "Ваше сообщение отправлено!", "success");
+    setTimeout(function() {
+      $.magnificPopup.close();
+      $(".feedback").trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
+
+$('.btn--address').magnificPopup({
+  type:'inline',
+  midClick: true,
+  removalDelay: 300,
+  mainClass: 'mfp-fade'
+});

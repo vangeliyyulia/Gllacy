@@ -5,6 +5,8 @@
 @import 'base/mixins';
 @import 'base/animations';
 
+@import 'vendors/libs';
+
 @import 'components/header';
 @import 'components/login-form';
 @import 'components/btn';
@@ -13,4 +15,7 @@
 @import 'components/card';
 @import 'components/aboutus';
 @import 'components/news';
+@import 'components/map';
+@import 'components/footer';
+@import 'components/overlay';
 

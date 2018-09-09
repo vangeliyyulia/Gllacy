@@ -18,6 +18,10 @@
         &--blog {
             background: white url("../img/decorative/strawberry.jpg") no-repeat center right;
             background-size: 50%;
+            font-weight: 700;
+            line-height: 1.25;
+            font-family: $main-font;
+            color: $grey;
         }
 
         &--mail {
@@ -26,4 +30,63 @@
             background-size: cover;
         }
     }
+
+    &__heading {
+        margin: 1rem 0 .5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__link {
+        font-size: 2.4rem;
+        color: $grey;
+        max-width: 30rem;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+
+    &__form {
+        margin: 0;
+        padding: 1.5rem;
+        border-radius: 1.2rem;
+        background-color: #fff;
+    }
+
+    &__description {
+        font-family: $main-font;
+        font-size: 1.6rem;
+        color: #5a5a5a;
+        line-height: 1.375;
+    }
+
+    &__field {
+        margin: 0;
+        margin-top: 3.5rem;
+        padding: 0;
+        border: none;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        margin-right: 1rem;
+    }
+}
+
+.text-input__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #999;
 }
