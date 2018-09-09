@@ -3,6 +3,7 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 4rem;
     }
@@ -28,10 +29,16 @@
         }
 
         &:hover .card__overlay {
-            visibility: visible;
-            z-index: 1;
-            animation: slide-down 300ms ease-in-out;
-          }
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
     &__price {

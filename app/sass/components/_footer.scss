@@ -4,6 +4,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     & ul {
@@ -66,10 +70,18 @@
 
         &:nth-child(3) {
             margin-left: 6rem;
+
+            @include respond(phone) {
+                margin-left: 0;
+            }
         }
 
         &:nth-child(4) {
             margin-left: 1rem;
+
+            @include respond(phone) {
+                margin-left: 0;
+            }
         }
     }
     

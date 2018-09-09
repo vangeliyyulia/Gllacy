@@ -3,6 +3,10 @@
     position: relative;
     margin-bottom: 4rem;
 
+    @include respond(phone) {
+        display: none;
+    }
+
     &__glow {
         z-index: -3;
         position: absolute;
