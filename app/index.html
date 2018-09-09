@@ -108,6 +108,7 @@
                 </ul>
             </nav>
             <section class="header__info">
+                <h3 class="visually-hidden">Время работы и телефон</h3>
                 <div class="header__content">
                     <p class="header__time">С 10 до 20, ежедневно</p>
                     <a class="header__phone" href="tel:+7-812-450-25-25">8 812 450-25-25</a>
@@ -118,6 +119,7 @@
     <main class="main">
         <div class="container">
             <section class="slider">
+                <h3 class="visually-hidden">Слайды</h3>
                 <section class="slider__toggles">
                     <h3 class="visually-hidden">Листать слайды:</h3>
                     <button class="slider__toggle active" id="mint" type="button" onclick="currentSlide(1)">
@@ -183,6 +185,7 @@
                 </div>
             </section>
             <section class="specials">
+                <h3 class="visually-hidden">Специальные предложения</h3>
                 <ul class="specials__list">
                     <li class="specials__item specials__item--jam">
                         <h3 class="specials__heading">Малинка даром!</h3>
@@ -197,6 +200,7 @@
                 </ul>
             </section>
             <section class="card">
+                <h3 class="visually-hidden">Каталог</h3>
                 <div class="card__list">
                     <div class="card__item">
                         <picture>
@@ -289,6 +293,7 @@
                 </div>
             </section>
             <section class="aboutus">
+                <h3 class="visually-hidden">О компании</h3>
                 <h2 class="aboutus__heading">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного<br> производства на развес</h2>
                 <ul class="aboutus__list">
                     <li class="aboutus__item">
@@ -322,6 +327,7 @@
                 </ul>
             </section>
             <section class="news">
+                <h3 class="visually-hidden">Новости блога и подписка на рассылку</h3>
                 <ul class="news__list">
                     <li class="news__item news__item--blog">
                         <h3 class="news__heading">Новое в нашем блоге</h3>
@@ -345,7 +351,7 @@
         </div>
         <section class="map">
             <h3 class="visually-hidden">Наш адрес на Яндекс.Картах</h3>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af389e1170b5c61c2fa2e8161fab88ada69284ef9390dac1e649b2f69844ab15a&amp;source=constructor" width="100%" height="404" frameborder="0"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af389e1170b5c61c2fa2e8161fab88ada69284ef9390dac1e649b2f69844ab15a&amp;source=constructor" width="100%" height="404"></iframe>
             <div class="map__inner"></div>
             <section class="address address--on-map">
                 <h3 class="visually-hidden">Адрес и телефон:</h3>
@@ -362,11 +368,95 @@
                         </p>
                     </div>
                 </address>    
-                <a class="btn btn--address" href="#">Форма обратной связи</a>
+                <a class="btn btn--address" href="#modal">Форма обратной связи</a>
             </section>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" width="32" height="32">
+                                <title>Твиттер</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" width="32" height="32">
+                                <title>Инстаграм</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-insta"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" width="32" height="32">
+                                <title>Фейсбук</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" width="32" height="32">
+                                <title>Вконтакте</title>
+                                <use xlink:href="img/icons/sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__documents">
+                    <li class="footer__document">
+                        <svg class="footer__heart" width="15" height="13">
+                            <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                        </svg>
+                        <a href="#" class="footer__link">Для поставщиков</a>
+                    </li>
+                    <li class="footer__document">
+                        <a href="#" class="footer__link">Наши документы</a>
+                    </li>
+                    <li class="footer__document">
+                        <a href="#" class="footer__link">О производстве</a>
+                    </li>
+                    <li class="footer__document">
+                        <a href="#" class="footer__link">Экологические стандарты</a>
+                    </li>
+                </ul>
+                <div class="footer__logo">
+                    <img class="footer__image" src="img/content/academy-logo.svg" width="108" height="38" alt="HTML Academy">
+                    <p class="footer__info">Сделано в
+                        <a class="footer__logo-link" href="#">HTML Academy</a> © 2017
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay mfp-hide">
+        <form class="feedback mfp-hide" name="feedback" id="modal" method="post" autocomplete="on">
+            <h3 class="feedback__heading">Мы обязательно вам ответим!</h3>
+            <fieldset class="feedback__field">
+                <div class="text-input">
+                    <input class="feedback__input text-input__field" type="text" name="name" id="name" placeholder="Как вас зовут?" required>
+                </div>    
+                <div class="text-input">
+                    <input class="feedback__input text-input__field" type="email" name="email" id="feedback-mail" placeholder="Ваша почта для ответа?" required>
+                </div>    
+                <div class="text-input">
+                <textarea class="feedback__input feedback__input--textarea text-input__field" name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
+                </div>
+            </fieldset>    
+            <button class="btn feedback__btn">Отправить</button>    
+            <button class="feedback__close popup__close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+        </form>
+    </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
 </html>

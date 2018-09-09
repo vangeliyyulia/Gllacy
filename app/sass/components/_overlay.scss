@@ -1,0 +1,79 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 1.2rem;
+  padding: 2rem 0;
+  position: relative;
+  margin: 0 auto;
+
+  &__heading {
+    font-family: $main-font;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  &__field {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+  }
+
+  &__input:not(.feedback__input--textarea) {
+    width: 67%;
+  }
+
+  &____input--textarea {
+    box-sizing: border-box;
+    width: 430px;
+    min-width: 400px;
+    min-height: 100px;
+    height: 155px;
+  }
+}
+
+.mfp-fade {
+    &.mfp-bg {
+      opacity: 0;
+      -webkit-transition: all 0.15s ease-out;
+      -moz-transition: all 0.15s ease-out;
+      transition: all 0.15s ease-out;
+      &.mfp-ready {
+        opacity: 0.8;
+      }
+      &.mfp-removing {
+        opacity: 0;
+      }
+    }
+    &.mfp-wrap {
+      .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+      }
+      &.mfp-ready .mfp-content {
+        opacity: 1;
+      }
+      &.mfp-removing .mfp-content {
+        opacity: 0;
+      }
+    }
+  }
+
+  .mfp-close-btn-in .mfp-close {
+    color: $grey;
+  }
+  
