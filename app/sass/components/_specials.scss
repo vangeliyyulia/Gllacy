@@ -4,6 +4,10 @@
         list-style: none;
         display: flex;
         justify-content: space-between;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -27,6 +31,10 @@
 
         &:not(:only-of-type):nth-of-type(2n-1) {
             margin-right: 2%;
+        }
+
+        @include respond(phone) {
+           width: 100%;
         }
     }
 

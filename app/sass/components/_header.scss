@@ -8,6 +8,10 @@
         display: flex;
         align-items: center;
 
+        @include respond(phone) {
+            flex-direction: column;
+         }
+
         &__logo {
             align-items: center;
             margin-right: 1rem;
@@ -157,7 +161,8 @@
                 position: relative;
 
                 &:hover .login {
-                    display: block;
+                   display: flex;
+                   flex-direction: column;
                 }
             }
         }
